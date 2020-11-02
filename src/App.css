@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,145 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.home {
+  color: white;
+  background-color: #0d130d;
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/broken_noise.png");
+}
+.logo-rightside {
+  font-size: 50px;
+  margin-left: 10px;
+  color: rgb(175, 41, 41);
+  font-family: monospace;
+  font-weight: bolder;
+}
+.mainImg {
+  margin-top: 101px;
+  min-height: 600px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+}
+.homepage-img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+.txtbox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 40px;
+  color: white;
+  font-family: "Oleo Script", cursive;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.txtbox-txt {
+  margin: 5px;
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/broken_noise.png");
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.txtbox-text--big {
+  font-size: 50px;
+}
+/* Body part */
+
+.body-part {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* introTxt1 */
+
+.introTxt1-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introTxt1 {
+  display: flex;
+  margin: 20px 100px;
+  max-width: 1000px;
+  /* margin-top: 100px;
+  margin-bottom: 100px; */
+}
+
+@media screen and (max-width: 768px) {
+  .introTxt1 {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .introTxt1 {
+    margin: 10px;
+  }
+}
+
+.introTxt1-title-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding-right: 60px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.introTxt1-welcome {
+  margin-right: 15px;
+  font-family: Arial Narrow;
+  font-size: 25px;
+}
+.introTxt1-izakaya {
+  font-family: Bradley Hand;
+  font-size: 25px;
+}
+.introTxt1-Ten {
+  font-family: monospace;
+  color: rgb(175, 41, 41);
+  font-weight: bolder;
+}
+
+.introTxt1-content-right {
+  max-width: 500px;
+  padding-right: 10px;
+}
+.introTxt1-content-1 {
+  font-family: Courier;
+  font-size: 14px;
+}
+.introTxt1-content-2 {
+  text-align: center;
+
+  font-family: Courier;
+  font-size: 14px;
+  border: 1px solid rgb(175, 41, 41);
+  padding: 10px;
+  max-width: 200px;
+  margin-top: 30px;
+}
+
+.test {
+  background-color: #0d130d;
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/broken_noise.png");
+}
+
+.logo {
+  filter: drop-shadow(0 0 1px rgb(255, 255, 255))
+    drop-shadow(0 0 1px rgb(255, 255, 255))
+    drop-shadow(0 0 1px rgb(255, 255, 255));
 }

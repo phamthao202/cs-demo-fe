@@ -1,0 +1,87 @@
+.menuCard-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuCard-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid white;
+  width: fit-content;
+}
+.menuCards {
+  padding: 30px;
+}
+@media screen and (max-width: 576px) {
+  .menuCards {
+    position: relative;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+
+  .menuCard-layout {
+    width: 80%;
+  }
+}
+
+.menuCard-title {
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/broken_noise.png");
+  padding: 5px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+  font-family: "Oleo Script", cursive;
+  font-size: 30px;
+  pointer-events: none;
+}
+.menuCard-img-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.menuCard-layout a {
+  width: 100%;
+}
+.menuCard-img {
+  width: 100%;
+}
+.menuCard-layout-color {
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.menuCard-layout-color:hover {
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+.menuCard-desc {
+  padding: 25px;
+  font-family: courier;
+  text-align: center;
+}
+.menuCard-btn {
+  border: 1px solid rgb(175, 41, 41);
+  padding: 5px 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "Oleo Script", cursive;
+}
+.menuCard-line {
+  padding-left: 50px;
+  padding-right: 50px;
+  border-bottom: 5px solid white;
+}
