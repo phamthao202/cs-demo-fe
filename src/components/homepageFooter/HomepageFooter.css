@@ -1,0 +1,111 @@
+.footer-parent {
+  width: 100%;
+  display: block;
+  margin-top:50px;
+}
+.footer-1 {
+  background-color: rgb(85, 82, 82);
+}
+.footer-1-right-other-resto {
+  background-color: rgb(100, 97, 97);
+}
+.footer-3 {
+  display: flex;
+  justify-content: center;
+}
+.footer-3 {
+  background-color: black;
+  height: 60px;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.footer-1-left-logo-image {
+  margin:30px;
+  height: 50px;
+}
+.footer-1-left-logo-image {
+   
+   
+  }
+.footer-1-left-restaurant-information {
+  padding: 1px 10px 10px 40px;
+}
+.button-reservation-footer {
+  border: 0px;
+  max-width: 270px;
+  width: 100%;
+  color: white;
+  margin: 0 auto;
+  line-height: 1;
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 18px 30px 18px;
+  background-color: rgb(100, 97, 97);
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+.button-reservation-footer:hover {
+  cursor: pointer;
+  background-color: rgb(175, 41, 41);
+}
+button:focus {
+  outline: 0;
+}
+
+.footer-reservation-img > img {
+  /* width: auto;
+    display: inline-block; */
+  padding: 10px 10px 10px 0px;
+}
+
+.footer-social-section > .fab {
+  margin: 10px;
+  font-size: 35px;
+}
+
+.footer-social-section > .fab:hover {
+  color: rgb(175, 41, 41);
+}
+
+
+.footer-1-social > a {
+  margin: 5px;
+  font-size: 25px;
+  color: white;
+}
+
+.footer-1-social > a:hover {
+  color: rgb(175, 41, 41);
+}
+.footer-make-a-reservation-block {
+  padding: 3px;
+}
+.footer-1-right-text-div {
+  padding-top: 10px;
+  padding-bottom: 55px;
+}
+.footer-1-right-other-resto {
+  padding: 55px;
+}
+
+.footer-typer-writer {
+  color: white;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.tenMap{
+  width:400px;
+}

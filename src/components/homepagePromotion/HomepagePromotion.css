@@ -1,0 +1,14 @@
+.promotion-content-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+.slide {
+  width: 300px; /* width of container */
+  height: 300px; /* height of container */
+  object-fit: cover;
+  
+
+}

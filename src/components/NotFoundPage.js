@@ -9,7 +9,7 @@ const NotFoundPage = () => {
           <h1>404</h1>
           <p>The Page You Requested Could Not Be Found.</p>
           <Image
-            src="../../images/error.png"
+            src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-template-10.png"
             alt="errorimg"
             style={{ width: "100%", marginTop: "50px" }}
           />

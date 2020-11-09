@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Nguyen Van A",
+    "jobType": "full-time",
+    "_id": "mongo cho"
+  },
+  {
+    "staff_id": "ref cai o tren",
+    "payslip": {
+       
+      "date": "01/02/2020",
+      "salary_shift_1": 30000,
+      "salary_shift_2": 50000,
+      "monthly_salary": 0,
+      "shift_1": 4, //thoi gian thuc te lam
+      "shift_2": 5,
+      "late_shift_1": 1,
+      "late_shift_2": 0,
+      "OT_shift_1": 0,
+      "OT_shift_2": 0,
+      "allowance": {
+        "meal": 20000,
+        "parking": 10000
+      },
+      "bonus": {
+        "sale": 50000,
+        "special": 100000
+      },
+      "daily_salary" : 500000
+    }
+  }
+]
+
+1/1 -> 15/1 
+16 -> 31/1
+
+12/16
+
+luong / 26 * 12

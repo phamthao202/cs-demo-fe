@@ -5,7 +5,7 @@ import NotFoundPage from "components/NotFoundPage";
 import HomePage from "containers/HomePage";
 import RegisterPage from "containers/RegisterPage";
 import LoginPage from "containers/LoginPage";
-import MenuPage from "containers/MenuPage";
+import MenuPage from "containers/menuPage/MenuPage";
 const PublicLayout = () => {
   return (
     <>
