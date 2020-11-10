@@ -1,32 +1,32 @@
 import React, { useEffect } from "react";
-import "./MenuPage.css"
+import "./MenuPage.css";
 import PublicNavbar from "../PuclicNavbar";
 import ImgMenuPage from "../../images/menuPageMainPic.jpg";
 import DrinkMenu from "../../components/drinkMenu/DrinkMenu";
 import { useSelector, useDispatch } from "react-redux";
 import OneDrink from "../../components/drinkMenu/OneDrink";
-import { categoryDrinkAction } from "../../redux/actions/index";
+import { categoryAction } from "../../redux/actions/index";
+import WhiteBrush from "../../images/menuPageBrush.png";
+import HomepageFooter from "components/homepageFooter/HomePageFooter";
+import FoodMenu from "components/foodMenu/FoodMenu";
 const MenuPage = () => {
   let dispatch = useDispatch();
-  const drinkMenu = useSelector((state) => state.cateDrink.menuByDrinkCategory);
-  const category = useSelector((state) => state.cateDrink.categoryDrink);
+  const menu = useSelector((state) => state.cate.menuByCategory);
+  const category = useSelector((state) => state.cate.category);
+
   useEffect(() => {
-    dispatch(categoryDrinkAction.getMenuListByCategoryDrink(category));
+    dispatch(categoryAction.getMenuListByCategory(category));
   }, [category]);
+
   return (
     <div className="menuPage">
       <PublicNavbar />
 
       <div className="menuPage-main">
         <div className="col-md-3 food-drink-side">
-          <div>
-            <h2>{category}</h2>
-            <h2>Day la menu Food</h2>
-            <h2>Day la menu Food</h2>
-            <h2>Day la menu Food</h2>
-            <h2>Day la menu Food</h2>
-          </div>
+          <FoodMenu />
         </div>
+
         <div className="col-md-6 menuPage-mainPicture">
           <img src={ImgMenuPage} className="menuPage-img-center" />
         </div>
@@ -34,10 +34,16 @@ const MenuPage = () => {
           <DrinkMenu />
         </div>
       </div>
-      <div className="menuByCategory-area">
-        {drinkMenu &&
-          drinkMenu.length > 0 &&
-          drinkMenu.map((item) => (
+
+      <div className="category-name-brush">
+        <img src={WhiteBrush} className="category-name-brush-img img-fluid" />
+        <div className="category-name-brush-word">Japanese Sake and Shochu</div>
+      </div>
+
+      <div className="menuByCategory-area ">
+        {menu &&
+          menu.length > 0 &&
+          menu.map((item) => (
             <OneDrink
               title={item.title}
               price={item.price}
@@ -46,9 +52,7 @@ const MenuPage = () => {
           ))}
       </div>
 
-      <h3 style={{color:"white"}}>day la menu ImgMenuPage</h3>
-      <h3>day la menu ImgMenuPage</h3>
-      <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>  <h3>day la menu ImgMenuPage</h3>
+      <HomepageFooter />
     </div>
   );
 };

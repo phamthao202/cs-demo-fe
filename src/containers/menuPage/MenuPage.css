@@ -1,6 +1,6 @@
 /*Menupage */
 .menuPage {
-  background-image: url("https://textures.world/wp-content/uploads/2018/10/4-Smooth-Concrete-Background-Texture-copy.jpg");
+  background-image: url("https://wallpaperaccess.com/full/983279.jpg");
   background-repeat: repeat;
 }
 .menuPage-main {
@@ -17,6 +17,8 @@
   margin: 10px;
   border: 1px solid whitesmoke;
   width: fit-content;
+  padding: 30px;
+  cursor: pointer;
 }
 .menuPage-mainPicture {
   display: flex;
@@ -25,33 +27,32 @@
   text-align: center;
   margin: 10px;
   border: 1px solid whitesmoke;
- 
+
   position: relative;
   overflow: hidden;
-  max-height:500px;
-  min-height:400px;
+
+  min-height: 400px;
 }
 @media screen and (max-width: 768px) {
-    .menuPage-main {
-      margin: 20px;
-      flex-direction: column;
-      align-items: center;
-    }
+  .menuPage-main {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  @media screen and (max-width: 768px) {
-    .menuPage-mainPicture {
-      margin: 20px;
-      min-width:300px;
-      min-height: 300px;
-    }
+}
+@media screen and (max-width: 768px) {
+  .menuPage-mainPicture {
+    margin: 20px;
+    min-width: 300px;
+    min-height: 300px;
   }
-  @media screen and (max-width: 768px) {
-    .food-drink-side {
-        
-      margin: 60px 20px;
-      min-width:300px;
-    }
+}
+@media screen and (max-width: 768px) {
+  .food-drink-side {
+    margin: 60px 20px;
+    min-width: 300px;
   }
+}
 .menuPage-img-center {
   top: 50%;
   left: 50%;
@@ -59,4 +60,24 @@
   min-width: 100%;
   min-height: 100%;
   position: absolute;
+}
+/* cai white brush  */
+.category-name-brush {
+  margin:20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.category-name-brush-img {
+  max-width: 500px;
+  min-width: 50%;
+  height: 150px;
+}
+.category-name-brush-word {
+  font-family: "Oleo Script", cursive;
+  font-size: 45px;
+  position: absolute;
+  text-align: center;
 }

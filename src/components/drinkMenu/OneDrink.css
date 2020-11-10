@@ -1,0 +1,38 @@
+.menuByCategory-area {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1050px) {
+  .menuByCategory-area {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.oneDrink-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 30px;
+}
+.oneDrink-img-div {
+  margin: 20px;
+}
+.oneDrink-img {
+  max-width: 300px; /* width of container */
+  min-height: 300px; /* height of container */
+  object-fit: cover;
+  border: 2px solid white;
+}
+.oneDrink-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  padding: 20px;
+  background-color: rgba(31, 32, 59, 0.749);
+  position: absolute;
+  margin-top: 280px;
+  font-family: courier;
+  font-weight: bold;
+}

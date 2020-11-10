@@ -1,6 +1,6 @@
 import React from "react";
 import PublicNavbar from "containers/PuclicNavbar";
-import "../components/managerPage/ManagerPage.css";
+
 const data = {
   staff_id: "ref cai o tren",
   payslip: {
@@ -33,7 +33,7 @@ const StaffPage = () => {
   return (
     <div>
       <PublicNavbar />
-      <div className="ManagerPage-Body container">
+      <div className="staffPage-Body container">
         <div className="d-flex align-items-center flex-column this-month-salary">
           <div>This month salary is</div>
           <div>{data.payslip.daily_salary}</div>

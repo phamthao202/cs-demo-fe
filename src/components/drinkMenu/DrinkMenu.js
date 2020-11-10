@@ -3,7 +3,7 @@ import React from "react";
 // import Badge from "react-bootstrap/Badge";
 import { useSelector, useDispatch } from "react-redux";
 import { expActions } from "redux/actions";
-import "./DrinkMenu.css"
+import "./DrinkMenu.css";
 const drinkCategory = [
   "Japanese Sake n Shochu",
   "Japanese Cocktail",
@@ -15,7 +15,7 @@ const DrinkMenu = () => {
 
   const searchByCategoryDrink = (categoryDrink) => {
     // console.log(category);
-    dispatch({ type: "SAVE_DRINKCATEGORY", payload: categoryDrink });
+    dispatch({ type: "SAVE_CATEGORY", payload: categoryDrink });
   };
   return (
     <div className="DrinkCategoryArea ">

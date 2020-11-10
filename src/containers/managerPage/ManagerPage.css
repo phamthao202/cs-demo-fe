@@ -1,0 +1,21 @@
+.ManagePage-Body {
+  margin-top: 120px;
+}
+.manager-button-area {
+}
+.manager-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+
+}
+.manager-btn {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  font-family: courier;
+  width: 200px;
+}

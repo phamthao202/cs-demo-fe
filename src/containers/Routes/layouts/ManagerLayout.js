@@ -2,7 +2,7 @@ import React from "react";
 // import { Container } from "react-bootstrap";
 import { Switch, Route } from "react-router-dom";
 import NotFoundPage from "components/NotFoundPage";
-import ManagerPage from "containers/ManagerPage";
+import ManagerPage from "containers/managerPage/ManagerPage";
 
 const ManagerLayout = () => {
   return (
