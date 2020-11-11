@@ -76,6 +76,7 @@ const verifyEmail = (code) => async (dispatch) => {
     dispatch({ type: types.VERIFY_EMAIL_FAILURE, payload: error });
   }
 };
+
 export const authActions = {
   register,
   loginRequest,

@@ -8,7 +8,7 @@ const foodCategory = [
   "Vegan",
   "Starter",
   "Main dishes",
-  "Grilled & Skewers",
+  "Grilled and Skewers",
   "Izakaya-Ten Signature",
 ];
 const FoodMenu = () => {
@@ -17,21 +17,19 @@ const FoodMenu = () => {
     dispatch({ type: "SAVE_CATEGORY", payload: categoryFood });
   };
   return (
-    <div className="DrinkCategoryArea ">
+    <div className="DrinkCategoryArea  ">
       <div class="categoryWord">Food Menu</div>
-      <div className="oneDrinkCategory">
-        <div>
-          {foodCategory.map((item) => (
-            <div>
-              <div
-                className="oneDrinkCate"
-                onClick={() => searchByCategoryFood(item.toLowerCase())}
-              >
-                {item}
-              </div>
+      <div className="oneDrinkCategory ">
+        {foodCategory.map((item) => (
+          <div>
+            <div
+              className="oneDrinkCate"
+              onClick={() => searchByCategoryFood(item.toLowerCase())}
+            >
+              {item}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

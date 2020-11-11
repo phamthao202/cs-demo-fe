@@ -7,8 +7,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-
 }
 .manager-btn {
   border: 1px solid black;
@@ -18,4 +16,5 @@
   margin: 20px;
   font-family: courier;
   width: 200px;
+  cursor: pointer;
 }

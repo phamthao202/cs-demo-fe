@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { expActions } from "redux/actions";
 import "./DrinkMenu.css";
 const drinkCategory = [
-  "Japanese Sake n Shochu",
+  "Japanese Sake and Shochu",
   "Japanese Cocktail",
   "More Alcohol",
   "Soft Drink",

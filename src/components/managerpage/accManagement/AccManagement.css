@@ -1,0 +1,11 @@
+.accManagement-current-new {
+  display: flex;
+  flex-wrap:wrap;
+ justify-content:space-around;
+}
+.accManagement-currentInformation-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}

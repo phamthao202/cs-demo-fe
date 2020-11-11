@@ -63,7 +63,7 @@
 }
 /* cai white brush  */
 .category-name-brush {
-  margin:20px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -80,4 +80,11 @@
   font-size: 45px;
   position: absolute;
   text-align: center;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 1300px) {
+  .menuByCategory-area {
+    max-width: 1250px !important;
+  }
 }
