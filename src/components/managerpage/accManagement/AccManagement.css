@@ -1,11 +1,14 @@
 .accManagement-current-new {
   display: flex;
-  flex-wrap:wrap;
- justify-content:space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.accManagement-currentInformation-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.accManagement-currentInformation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.createnewmenu-title {
+  display: flex;
+  text-align: center;
 }

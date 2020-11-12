@@ -6,14 +6,17 @@ import MenuManagerPage from "components/managerpage/menuManagerPage.js/MenuManag
 import SalaryManagerPage from "components/managerpage/salaryManagerPage/SalaryManagerPage";
 import EmployeeList from "components/employeeList/EmployeeList";
 import AccManagement from "components/managerpage/accManagement/AccManagement";
-import DailyPayslip from "components/dailyPayslip/DailyPayslip";
+import DailyPayslip from "components/dailyPayslip/DailyPayslipFulltime";
+import DailyPayslipFulltime from "components/dailyPayslip/DailyPayslipFulltime";
+import PostEvents from "components/managerpage/postEvents/PostEvents";
 const ManagerPage = () => {
   const [managerChoice, setManagerChoice] = useState("");
+
   return (
     <div>
       <PublicNavbar />
       <div className="ManagePage-Body">
-        <div className="row manager-button-area">
+        <div className="row manager-button-area p-3">
           <div className="col-md-3 manager-buttons">
             <div
               className="manager-btn"
@@ -22,7 +25,8 @@ const ManagerPage = () => {
               Menu
             </div>
 
-            <div className="manager-btn">Post Events</div>
+            <div className="manager-btn"
+            onClick={() => setManagerChoice("post events")}>Post Events</div>
             <div
               className="manager-btn "
               onClick={() => setManagerChoice("account management")}
@@ -37,10 +41,10 @@ const ManagerPage = () => {
             </div>
           </div>
           <div className="col-md-9">
-            <DailyPayslip/>
             {managerChoice === "menu" ? <MenuManagerPage /> : ""}
-            {managerChoice === "salary" ? <div><EmployeeList /> <DailyPayslip/></div> : ""}
+            {managerChoice === "salary" ? <EmployeeList /> : ""}
             {managerChoice === "account management" ? <AccManagement /> : ""}
+            {managerChoice === "post events" ? <PostEvents /> : ""}
           </div>
         </div>
       </div>

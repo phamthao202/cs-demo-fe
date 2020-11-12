@@ -7,6 +7,9 @@ import HomePage from "containers/HomePage";
 import RegisterPage from "containers/RegisterPage";
 import LoginPage from "containers/LoginPage";
 import MenuPage from "containers/menuPage/MenuPage";
+import PromotionPage from "containers/promotionPage/PromotionPage";
+import WeeklyMenuPage from "containers/weeklyMenuPage/WeeklyMenuPage";
+
 const PublicLayout = () => {
   return (
     <>
@@ -16,6 +19,8 @@ const PublicLayout = () => {
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
         <Route exact path="/menu" component={MenuPage} />
+        <Route exact path="/promotion" component={PromotionPage} />
+        <Route exact path="/weeklyMenu" component={WeeklyMenuPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </>

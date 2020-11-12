@@ -9,7 +9,7 @@ const foodCategory = [
   "Starter",
   "Main dishes",
   "Grilled and Skewers",
-  "Izakaya-Ten Signature",
+  "Izakaya Ten Signature",
 ];
 const FoodMenu = () => {
   const dispatch = useDispatch();

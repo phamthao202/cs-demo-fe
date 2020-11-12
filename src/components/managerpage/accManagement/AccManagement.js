@@ -20,7 +20,7 @@ const AccManagement = () => {
       newUserRole: e.target.newRole.value,
       employmentType: e.target.employmentType.value,
     };
-    console.log("newUserInformation",newUserInformation)
+    console.log("newUserInformation", newUserInformation);
     dispatch(employeeAction.editUserById(newUserInformation));
   };
   return (
@@ -49,7 +49,9 @@ const AccManagement = () => {
         </div>
       </form>
 
-      <div className="createnewmenu-title m-5">Edit User information</div>
+      <div className="createnewmenu-title m-4">
+        Edit User information
+      </div>
       <div className="accManagement-current-new">
         <div className="accManagement-currentInformation">
           <div className="accManagement-currentInformation-item mb-5">

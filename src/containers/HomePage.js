@@ -62,14 +62,16 @@ const HomePage = () => {
           color="rgba(22, 105, 110, 0.434)"
         />
         <MenuCard
+          url={`/weeklyMenu`}
           img={`https://livingnomads.com/wp-content/uploads/2018/03/03/Top-10-Foods-You-Must-Eat-in-Tokyo.jpg`}
           title="Weekly Menu"
           description='With our mission of "Delivering Wow, Sharing Happiness," we have been striving every day to provide the best dining experience to all of our dear guests. A restaurant should not be a place to simply have a meal.'
           color="rgba(22, 105, 110, 0.434)"
         />
         <MenuCard
+          url={`/promotion`}
           img={img1}
-          title="Promotion"
+          title=" Weekly Promotion"
           description='With our mission of "Delivering Wow, Sharing Happiness," we have been striving every day to provide the best dining experience to all of our dear guests. A restaurant should not be a place to simply have a meal.'
           color="rgba(22, 105, 110, 0.434)"
         />

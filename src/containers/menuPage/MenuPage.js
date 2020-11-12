@@ -18,7 +18,7 @@ const MenuPage = () => {
   useEffect(() => {
     if (category) dispatch(categoryAction.getMenuListByCategory(category));
     else {
-      dispatch(categoryAction.getMenuListByCategory("izakaya-ten signature"));
+      dispatch(categoryAction.getMenuListByCategory("izakaya ten signature"));
     }
   }, [category]);
 
@@ -42,7 +42,8 @@ const MenuPage = () => {
       <div className="category-name-brush">
         <img src={WhiteBrush} className="category-name-brush-img img-fluid" />
         <div className="category-name-brush-word">
-          {category ? category : "Izakaya-Ten Signature"}
+         
+          {category ? category : "izakaya ten signature"}
         </div>
       </div>
 

@@ -4,12 +4,15 @@ import authReducer from "./auth.reducer";
 
 import routeReducer from "./route.reducer";
 import employeeReducer from "./employee.reducer";
+import payslipReducer from "./payslip.reducer";
+import menuReducer from "./menu.reducer";
 // import userReducer from "./user.reducer";
 
 export default combineReducers({
   auth: authReducer,
-  //   blog: blogReducer,
+  payslip: payslipReducer,
   route: routeReducer,
   employee: employeeReducer,
   cate: categoryReducer,
+  menu: menuReducer,
 });

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./MenuManagerPage.css";
+import "./PostEvents.css";
 import { useSelector, useDispatch } from "react-redux";
 import { menuAction } from "redux/actions";
 import { Button } from "react-bootstrap";
 import { toast } from "react-toastify";
-const MenuManagerPage = () => {
+const PostEvents = () => {
   const [editable, setEditable] = useState(true);
   const [menuPicture, setMenuPicture] = useState("");
   const [targetMenu, setTargetMenu] = useState("");
@@ -54,7 +54,7 @@ const MenuManagerPage = () => {
 
   return (
     <div className="managerPage-menu">
-      <div className="createnewmenu-title">Creat new menu</div>
+      <div className="createnewmenu-title">Creat a new event</div>
       <form onSubmit={(e) => submitMenu(e)}>
         <div className="managerpage-menu-area ">
           <div className="managerpage-menu-item">
@@ -69,7 +69,7 @@ const MenuManagerPage = () => {
             </div>
           </div>
           <div className="managerpage-menu-item">
-            <div className="managerpage-menu-Price cung">Price</div>
+            <div className="managerpage-menu-Price cung">Time</div>
             <div className="managerpage-menu-Price-input">
               <input
                 required
@@ -94,9 +94,9 @@ const MenuManagerPage = () => {
             </div>
           </div>
           <div className="managerpage-menu-item">
-            <div className="managerpage-menu-Category cung"> Category</div>
+            <div className="managerpage-menu-Category cung"> Description</div>
             <div className="managerpage-menu-Category-input ">
-              <select
+              {/* <select
                 name="category"
                 className="managerpage-menu-Category-food"
               >
@@ -113,33 +113,34 @@ const MenuManagerPage = () => {
                 <option value="japanese cocktail">Japanese Cocktail</option>
                 <option value="more alcohol">More Alcohol</option>
                 <option value="soft drink">Soft Drink</option>
-              </select>
+              </select> */}
+              <input style={{height:"200px"}}  className="managerpage-menu-Category-food"></input>
             </div>
           </div>
         </div>
         <div className="createMenuButton-wrap">
           <button type="submit" className="createMenuButton">
-            Create new menu
+            Create new event
           </button>
         </div>
       </form>
       <div style={{ margin: "30px", border: "2px solid black" }}></div>
       {/* This is to EDIT MENU */}
 
-      <div className="createnewmenu-title">Edit or Delete menu</div>
+      <div className="createnewmenu-title">Edit or Delete event</div>
       {/* Check the menu */}
 
       <form onSubmit={(e) => submitTargetMenu(e)}>
         <div className="managerpage-menu-area ">
           <div className="managerpage-menu-item">
-            <div className="managerpage-menu-title cung">Editting menu</div>
+            <div className="managerpage-menu-title cung">Editting event</div>
             <div className="managerpage-menu-title-input">
               <input
                 required
                 name="email"
                 onChange={(e) => setTargetMenu(e.target.value)}
                 className="managerpage-menu-input"
-                placeholder="Target menu"
+                placeholder="Target event"
               ></input>
             </div>
           </div>
@@ -165,7 +166,7 @@ const MenuManagerPage = () => {
             </div>
           </div>
           <div className="managerpage-menu-item">
-            <div className="managerpage-menu-Price cung">Price</div>
+            <div className="managerpage-menu-Price cung">Time</div>
             <div className="managerpage-menu-Price-input">
               <input
                 required
@@ -190,9 +191,9 @@ const MenuManagerPage = () => {
             </div>
           </div>
           <div className="managerpage-menu-item">
-            <div className="managerpage-menu-Category cung"> Category</div>
+            <div className="managerpage-menu-Category cung"> Description</div>
             <div className="managerpage-menu-Category-input ">
-              <select
+              {/* <select
                 name="category"
                 className="managerpage-menu-Category-food"
               >
@@ -209,16 +210,17 @@ const MenuManagerPage = () => {
                 <option value="japanese cocktail">Japanese Cocktail</option>
                 <option value="more alcohol">More Alcohol</option>
                 <option value="soft drink">Soft Drink</option>
-              </select>
+              </select> */}
+               <input style={{height:"200px"}} className="managerpage-menu-Category-food"></input>
             </div>
           </div>
         </div>
         <div className="createMenuButton-wrap d-flex flex-column align-items-center">
           <button type="submit" className="createMenuButton m-3">
-            Edit menu
+            Edit event
           </button>
           <button type="submit" className="createMenuButton">
-            Delete menu
+            Delete event
           </button>
         </div>
       </form>
@@ -226,4 +228,4 @@ const MenuManagerPage = () => {
   );
 };
 
-export default MenuManagerPage;
+export default PostEvents;
