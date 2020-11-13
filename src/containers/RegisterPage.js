@@ -4,6 +4,7 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { authActions, routeActions } from "redux/actions";
+import PublicNavbar from "./PuclicNavbar";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -52,7 +53,11 @@ const RegisterPage = () => {
   }, [dispatch, history, redirectTo]);
 
   return (
-    <Container>
+    <div>
+      <PublicNavbar/>
+    <Container className="login-container">
+    <div className="login">
+      <div className="delenlogin"></div>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <div className="text-center mb-3">
@@ -145,7 +150,9 @@ const RegisterPage = () => {
           </Form>
         </Col>
       </Row>
+      </div>
     </Container>
+    </div>
   );
 };
 

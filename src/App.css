@@ -169,7 +169,7 @@
 }
 
 .test {
-  background-color: #28312800 ;
+  background-color: #28312800;
   background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/broken_noise.png");
 }
 
@@ -200,4 +200,13 @@
 .promotion-required {
   font-family: "Oleo Script", cursive;
   font-size: 25px;
+}
+.login-container {
+  background-image: url("https://whateverworkshop.co/wp-content/uploads/2014/03/IZAKAYA-ISSEI-LOGO-SKETCH-3.jpg");
+  background-size: cover;
+  height: 720px;
+  background-repeat: no-repeat;
+}
+.login {
+  padding-top:500px;
 }

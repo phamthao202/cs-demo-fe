@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import PublicNavbar from "../PuclicNavbar";
 import "./ManagerPage.css";
 import MenuManagerPage from "components/managerpage/menuManagerPage.js/MenuManagerPage";
-import SalaryManagerPage from "components/managerpage/salaryManagerPage/SalaryManagerPage";
+// import SalaryManagerPage from "components/managerpage/salaryManagerPage/SalaryManagerPage";
 import EmployeeList from "components/employeeList/EmployeeList";
 import AccManagement from "components/managerpage/accManagement/AccManagement";
 import DailyPayslip from "components/dailyPayslip/DailyPayslipFulltime";

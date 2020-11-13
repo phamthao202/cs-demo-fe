@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FB_APP_ID, GOOGLE_CLIENT_ID } from "../redux/constants/auth.constants";
 import FacebookLogin from "react-facebook-login";
 import { GoogleLogin } from "react-google-login";
+import PublicNavbar from "./PuclicNavbar";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -45,129 +46,138 @@ const LoginPage = () => {
   console.log("api id", FB_APP_ID);
   if (isAuthenticated) return <Redirect to="/" />;
   return (
-    <Container>
-      <Row>
-        <Col md={{ span: 6, offset: 3 }}>
-          <Form onSubmit={handleSubmit}>
-            <div className="text-center mb-3">
-              <h1 className="text-primary">Sign In</h1>
-              <p className="lead">
-                <FontAwesomeIcon icon="user" size="1x" /> Sign Into Your Account
-              </p>
-            </div>
-            <Form.Group>
-              <Form.Control
-                type="email"
-                required
-                placeholder="Email Address"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && (
-                <small className="form-text text-danger">{errors.email}</small>
-              )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                minLength="3"
-              />
-              {errors.password && (
-                <small className="form-text text-danger">
-                  {errors.password}
-                </small>
-              )}
-            </Form.Group>
+    <div>
+      <PublicNavbar />
 
-            {loading ? (
-              <Button
-                className="btn-block"
-                variant="primary"
-                type="button"
-                disabled
-              >
-                <span
-                  className="spinner-border spinner-border-sm"
-                  role="status"
-                  aria-hidden="true"
-                ></span>
-                Loading...
-              </Button>
-            ) : (
-              <Button className="btn-block" type="submit" variant="primary">
-                Login
-              </Button>
-            )}
+      <Container className="login-container">
+        <div className="login">
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <Form onSubmit={handleSubmit}>
+                <div className="text-center mb-3">
+                  <h1 className="text-primary">Sign In</h1>
+                  <p className="lead">
+                    <FontAwesomeIcon icon="user" size="1x" /> Sign Into Your
+                    Account
+                  </p>
+                </div>
+                <Form.Group>
+                  <Form.Control
+                    type="email"
+                    required
+                    placeholder="Email Address"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && (
+                    <small className="form-text text-danger">
+                      {errors.email}
+                    </small>
+                  )}
+                </Form.Group>
+                <Form.Group>
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    minLength="3"
+                  />
+                  {errors.password && (
+                    <small className="form-text text-danger">
+                      {errors.password}
+                    </small>
+                  )}
+                </Form.Group>
 
-            <div className="d-flex flex-column text-center">
-              <FacebookLogin
-                appId={FB_APP_ID}
-                fields="name,email,picture"
-                callback={loginWithFacebook}
-                icon="fa-facebook"
-                onFailure={(err) => {
-                  console.log("FB LOGIN ERROR:", err);
-                }}
-                containerStyle={{
-                  textAlign: "center",
-                  backgroundColor: "#3b5998",
-                  borderColor: "#3b5998",
-                  flex: 1,
-                  display: "flex",
-                  color: "#fff",
-                  cursor: "pointer",
-                  marginBottom: "3px",
-                }}
-                buttonStyle={{
-                  flex: 1,
-                  textTransform: "none",
-                  padding: "12px",
-                  background: "none",
-                  border: "none",
-                }}
-              />
-            </div>
-            <div className="d-flex flex-column text-center">
-              <GoogleLogin
-                className="google-btn d-flex justify-content-center"
-                clientId={GOOGLE_CLIENT_ID}
-                buttonText="Login with Google"
-                onSuccess={loginWithGoogle}
-                onFailure={(err) => {
-                  console.log("GOOGLE LOGIN ERROR:", err);
-                }}
-                containerStyle={{
-                  textAlign: "center",
-                  backgroundColor: "#3b5998",
-                  borderColor: "#3b5998",
-                  flex: 1,
-                  display: "flex",
-                  color: "#fff",
-                  cursor: "pointer",
-                  marginBottom: "3px",
-                }}
-                buttonStyle={{
-                  flex: 1,
-                  textTransform: "none",
-                  padding: "12px",
-                  background: "none",
-                  border: "none",
-                }}
-                cookiePolicy="single_host_origin"
-              />
-            </div>
-            <p>
-              Don't have an account? <Link to="/register">Sign Up</Link>
-            </p>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+                {loading ? (
+                  <Button
+                    className="btn-block"
+                    variant="primary"
+                    type="button"
+                    disabled
+                  >
+                    <span
+                      className="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Loading...
+                  </Button>
+                ) : (
+                  <Button className="btn-block" type="submit" variant="primary">
+                    Login
+                  </Button>
+                )}
+
+                <div className="d-flex flex-column text-center">
+                  <FacebookLogin
+                    appId={FB_APP_ID}
+                    fields="name,email,picture"
+                    callback={loginWithFacebook}
+                    icon="fa-facebook"
+                    onFailure={(err) => {
+                      console.log("FB LOGIN ERROR:", err);
+                    }}
+                    containerStyle={{
+                      textAlign: "center",
+                      backgroundColor: "#3b5998",
+                      borderColor: "#3b5998",
+                      flex: 1,
+                      display: "flex",
+                      color: "#fff",
+                      cursor: "pointer",
+                      marginBottom: "3px",
+                    }}
+                    buttonStyle={{
+                      flex: 1,
+                      textTransform: "none",
+                      padding: "12px",
+                      background: "none",
+                      border: "none",
+                    }}
+                  />
+                </div>
+                <div className="d-flex flex-column text-center">
+                  <GoogleLogin
+                    className="google-btn d-flex justify-content-center"
+                    clientId={GOOGLE_CLIENT_ID}
+                    buttonText="Login with Google"
+                    onSuccess={loginWithGoogle}
+                    onFailure={(err) => {
+                      console.log("GOOGLE LOGIN ERROR:", err);
+                    }}
+                    containerStyle={{
+                      textAlign: "center",
+                      backgroundColor: "#3b5998",
+                      borderColor: "#3b5998",
+                      flex: 1,
+                      display: "flex",
+                      color: "#fff",
+                      cursor: "pointer",
+                      marginBottom: "3px",
+                    }}
+                    buttonStyle={{
+                      flex: 1,
+                      textTransform: "none",
+                      padding: "12px",
+                      background: "none",
+                      border: "none",
+                    }}
+                    cookiePolicy="single_host_origin"
+                  />
+                </div>
+                <p>
+                  Don't have an account? <Link to="/register">Sign Up</Link>
+                </p>
+              </Form>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+    </div>
   );
 };
 
