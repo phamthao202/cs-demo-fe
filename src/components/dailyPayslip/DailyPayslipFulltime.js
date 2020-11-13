@@ -11,7 +11,7 @@ const DailyPayslipFulltime = () => {
         <div className="staff-information-card">
           <div className="staff-information">
             <div className="staff-information-left">Staff name :</div>
-            <div className="staff-information-right">Nguyen Van A</div>
+            <div className="staff-information-right">Le Khanh Linh</div>
           </div>
           <div className="staff-information">
             <div className="staff-information-left">Postition :</div>

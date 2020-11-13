@@ -14,21 +14,23 @@ const createNewMenu = (menu) => async (dispatch) => {
     dispatch({ type: types.CREATE_MENU_FAILURE, payload: error });
   }
 };
-// const updateMenu = (blogId, title, pictureUrl, price,category redirectTo="__GO_BACK__") => async (dispatch) => {
-//   dispatch({ type: types.UPDATE_MENU_REQUEST, payload: null });
-//   try {
-//     const res = await api.put(`/blogs/${blogId}`, { title, content, images });
-//     dispatch({
-//       type: types.UPDATE_MENU_SUCCESS,
-//       payload: res.data.data,
-//     });
-//     // dispatch(routeActions.redirect(redirectTo));
-//     toast.success("Menu has been updated!");
-//   } catch (error) {
-//     console.log(error);
-//     dispatch({ type: types.UPDATE_MENU_FAILURE, payload: error });
-//   }
-// };
+const updateMenu = (editInformation, targetId) => async (dispatch) => {
+  // const { title, pictureUrl, price, category } = editInformation;
+  dispatch({ type: types.UPDATE_MENU_REQUEST, payload: null });
+  try {
+    console.log("taget id vao den action update chua?", targetId);
+    const res = await api.patch(`/menu/${targetId}`, editInformation);
+    dispatch({
+      type: types.UPDATE_MENU_SUCCESS,
+      payload: res.data.data,
+    });
+    // dispatch(routeActions.redirect(redirectTo));
+    toast.success("Menu has been updated!");
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: types.UPDATE_MENU_FAILURE, payload: error });
+  }
+};
 
 const getMenuByTitle = (title) => async (dispatch) => {
   dispatch({ type: types.GET_MENUBYTITLE_REQUEST, payload: null });
@@ -45,10 +47,10 @@ const getMenuByTitle = (title) => async (dispatch) => {
     dispatch({ type: types.GET_MENUBYTITLE_FAILURE, payload: error });
   }
 };
-const deleteMenu = (title, redirectTo = "__GO_BACK__") => async (dispatch) => {
+const deleteMenu = (id, redirectTo = "__GO_BACK__") => async (dispatch) => {
   dispatch({ type: types.DELETE_MENU_REQUEST, payload: null });
   try {
-    const res = await api.delete(`/blogs/${title}`);
+    const res = await api.delete(`/menu/${id}`);
     dispatch({
       type: types.DELETE_MENU_SUCCESS,
       payload: res.data,
@@ -63,4 +65,6 @@ const deleteMenu = (title, redirectTo = "__GO_BACK__") => async (dispatch) => {
 export const menuAction = {
   createNewMenu,
   getMenuByTitle,
+  deleteMenu,
+  updateMenu,
 };

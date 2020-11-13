@@ -4,11 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { menuAction } from "redux/actions";
 import { Button } from "react-bootstrap";
 import { toast } from "react-toastify";
+import OneDrink from "components/drinkMenu/OneDrink";
 const MenuManagerPage = () => {
   const [editable, setEditable] = useState(true);
   const [menuPicture, setMenuPicture] = useState("");
   const [targetMenu, setTargetMenu] = useState("");
   const dispatch = useDispatch();
+  const targetItem = useSelector((state) => state.menu.targetMenu);
+  console.log("target menu", targetItem);
   const uploadPicture = () => {
     window.cloudinary.openUploadWidget(
       {
@@ -42,8 +45,27 @@ const MenuManagerPage = () => {
       dispatch(menuAction.createNewMenu(newMenu));
     }
   };
+
   const editMenu = (e) => {
     e.preventDefault();
+    let targetId = targetItem._id;
+
+    let editInformation = {};
+    if (e.target.title.value) editInformation.title = e.target.title.value;
+    if (e.target.price.value) editInformation.price = e.target.price.value;
+    if (menuPicture) editInformation.pictureUrl = menuPicture;
+    if (e.target.category.value)
+      editInformation.category = e.target.category.value;
+
+    // title: e.target.title.value,
+    // price: e.target.price.value,
+    // pictureUrl: menuPicture,
+    // category: e.target.category.value,
+    dispatch(menuAction.updateMenu(editInformation, targetId));
+  };
+
+  const deleteMenu = () => {
+    dispatch(menuAction.deleteMenu(targetItem._id));
   };
 
   const submitTargetMenu = (e) => {
@@ -150,14 +172,23 @@ const MenuManagerPage = () => {
           </button>
         </div>
       </form>
+      <div style={{ marginBottom: "30px" }}>
+        {targetMenu && (
+          <OneDrink
+            pictureUrl={targetItem.pictureUrl}
+            title={targetItem.title}
+            price={targetItem.price}
+          />
+        )}
+      </div>
       {/* Check the menu above */}
+      {/* Edit menu */}
       <form onSubmit={(e) => editMenu(e)}>
         <div className="managerpage-menu-area ">
           <div className="managerpage-menu-item">
             <div className="managerpage-menu-title cung">Title</div>
             <div className="managerpage-menu-title-input">
               <input
-                required
                 name="title"
                 className="managerpage-menu-input"
                 placeholder="Food name"
@@ -168,7 +199,6 @@ const MenuManagerPage = () => {
             <div className="managerpage-menu-Price cung">Price</div>
             <div className="managerpage-menu-Price-input">
               <input
-                required
                 name="price"
                 type="number"
                 className="managerpage-menu-input"
@@ -196,6 +226,7 @@ const MenuManagerPage = () => {
                 name="category"
                 className="managerpage-menu-Category-food"
               >
+                <option value="">---</option>
                 <option value="vegan">Vegan</option>
                 <option value="starter">Starter</option>
                 <option value="main dishes">Main Dishes</option>
@@ -217,7 +248,7 @@ const MenuManagerPage = () => {
           <button type="submit" className="createMenuButton m-3">
             Edit menu
           </button>
-          <button type="submit" className="createMenuButton">
+          <button onClick={() => deleteMenu()} className="createMenuButton">
             Delete menu
           </button>
         </div>
